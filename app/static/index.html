@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>State of AI — Опрос</title>
+    
+    <!-- DaisyUI CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            daisyui: {
+                themes: ["black", "dark", "business"],
+                darkTheme: "black",
+                base: true,
+                styled: true,
+                utils: true,
+            }
+        };
+    </script>
+</head>
+
+<body class="bg-black text-white" data-theme="black">
+    <!-- Navbar -->
+    <header class="navbar container mx-auto px-4 py-2">
+        <div class="flex-1">
+            <a href="#" class="btn btn-ghost normal-case text-xl">State&nbsp;of&nbsp;AI</a>
+        </div>
+        <div class="flex-none">
+            <a href="#form" class="btn btn-outline">Пройти&nbsp;опрос</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-5xl">
+                <div class="mb-8">
+                    <div class="badge badge-primary badge-lg mb-4">🤖 State of AI 2025</div>
+                </div>
+                <h1 class="mb-8 text-5xl lg:text-7xl font-black bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    Первый ежегодный опрос об ИИ в России и СНГ
+                </h1>
+                <p class="mb-8 text-xl lg:text-2xl leading-relaxed opacity-90">
+                    Поделитесь опытом использования технологий искусственного интеллекта 
+                    в 2025 году и помогите сформировать карту трендов для сообщества
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#form" class="btn btn-primary btn-lg text-lg px-8">
+                        🚀 Принять участие
+                    </a>
+                    <a href="#about" class="btn btn-outline btn-lg text-lg px-8">
+                        📊 Узнать больше
+                    </a>
+                </div>
+                <div class="mt-12 stats stats-vertical lg:stats-horizontal shadow bg-black/20 backdrop-blur border border-white/10">
+                    <div class="stat">
+                        <div class="stat-figure text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-title text-white/70">Участников</div>
+                        <div class="stat-value text-white font-bold">2,000+</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-figure text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-title text-white/70">Компаний</div>
+                        <div class="stat-value text-white font-bold">500+</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-figure text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-title text-white/70">Время</div>
+                        <div class="stat-value text-white font-bold">10 мин</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#benefits" class="btn btn-circle btn-outline">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="py-24 px-4 bg-base-200">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">Почему стоит участвовать?</h2>
+                <p class="text-xl opacity-70 max-w-2xl mx-auto">
+                    Ваше участие поможет создать самый полный обзор состояния ИИ в регионе
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="card-title text-xl mb-3">Влияйте на будущее ИИ</h3>
+                        <p class="opacity-80 leading-relaxed">
+                            Ваши ответы помогут сформировать обзор рынка и направить развитие инструментов
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">📊</div>
+                        <h3 class="card-title text-xl mb-3">Получите результаты первыми</h3>
+                        <p class="opacity-80 leading-relaxed">
+                            Все участники получат детальный отчёт сразу после публикации
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">🤝</div>
+                        <h3 class="card-title text-xl mb-3">Станьте частью сообщества</h3>
+                        <p class="opacity-80 leading-relaxed">
+                            Найдите единомышленников и расширьте профессиональные связи
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:scale-105">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">⚡</div>
+                        <h3 class="card-title text-xl mb-3">Сэкономьте время на ресёрч</h3>
+                        <p class="opacity-80 leading-relaxed">
+                            Мы сделаем сводку лучших практик и технологий за вас
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:scale-105">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">🎁</div>
+                        <h3 class="card-title text-xl mb-3">Выиграйте призы</h3>
+                        <p class="opacity-80 leading-relaxed">
+                            Участники опроса автоматически участвуют в розыгрыше подарков
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:scale-105">
+                    <div class="card-body">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="card-title text-xl mb-3">Узнайте тренды первым</h3>
+                        <p class="opacity-80 leading-relaxed">
+                            Быстрый доступ к ключевым выводам исследования
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#form" class="btn btn-primary btn-lg px-8">
+                    🚀 Участвовать в опросе
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="bg-neutral py-16 px-4">
+        <h2 class="text-center text-3xl font-semibold mb-8">О&nbsp;проекте State of AI</h2>
+        <div class="max-w-4xl mx-auto text-lg leading-relaxed space-y-4">
+            <p>
+                <strong>State&nbsp;of&nbsp;AI</strong> — масштабный исследовательский проект,
+                посвящённый применению технологий искусственного интеллекта в России и
+                странах СНГ. Мы опрашиваем разработчиков, инженеров данных и
+                руководителей ИИ‑команд, чтобы понять, как используются алгоритмы,
+                какие инструменты наиболее востребованы и какие вызовы стоят перед отраслью.
+            </p>
+            <p>
+                Наша цель — предоставить сообществу исчерпывающий обзор текущего
+                состояния рынка ИИ, выявить боли и лучшие практики и тем самым
+                ускорить внедрение инноваций.
+            </p>
+            
+            <div class="text-center mt-12">
+                <a href="#form" class="btn btn-outline btn-lg px-8">
+                    📝 Принять участие
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-24 px-4 bg-base-200">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">AI: узнайте тренды</h2>
+                <p class="text-xl opacity-70 max-w-3xl mx-auto">
+                    Примеры данных и инсайтов, которые вы получите после участия в опросе
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- График 1: Популярность языков ИИ -->
+                <div class="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-4">🐍 Популярность языков программирования</h3>
+                        <div class="w-full h-40 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-4 relative overflow-hidden">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex justify-between items-end space-x-2">
+                                    <div class="bg-white/20 backdrop-blur rounded px-2 py-1 text-xs">Python 78%</div>
+                                    <div class="bg-white/20 backdrop-blur rounded px-2 py-1 text-xs">R 15%</div>
+                                    <div class="bg-white/20 backdrop-blur rounded px-2 py-1 text-xs">Julia 7%</div>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4">
+                                <div class="badge badge-primary">2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- График 2: Использование фреймворков -->
+                <div class="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-4">🔧 ML/AI фреймворки</h3>
+                        <div class="w-full h-40 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg p-4 relative overflow-hidden">
+                            <div class="absolute inset-4 flex flex-col justify-center space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-white">TensorFlow</span>
+                                    <span class="text-sm text-white font-bold">45%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2">
+                                    <div class="bg-white h-2 rounded-full" style="width: 45%"></div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-white">PyTorch</span>
+                                    <span class="text-sm text-white font-bold">38%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2">
+                                    <div class="bg-white h-2 rounded-full" style="width: 38%"></div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-white">Scikit-learn</span>
+                                    <span class="text-sm text-white font-bold">65%</span>
+                                </div>
+                                <div class="w-full bg-white/20 rounded-full h-2">
+                                    <div class="bg-white h-2 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- График 3: Зарплаты ИИ специалистов -->
+                <div class="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-4">💰 Зарплаты в ИИ</h3>
+                        <div class="w-full h-40 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg p-4 relative overflow-hidden">
+                            <div class="absolute inset-4 flex items-end justify-between">
+                                <div class="flex flex-col items-center">
+                                    <div class="bg-white/30 rounded-t w-8 h-16"></div>
+                                    <span class="text-xs text-white mt-1">Junior</span>
+                                    <span class="text-xs text-white font-bold">150k</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="bg-white/50 rounded-t w-8 h-24"></div>
+                                    <span class="text-xs text-white mt-1">Middle</span>
+                                    <span class="text-xs text-white font-bold">280k</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="bg-white/70 rounded-t w-8 h-32"></div>
+                                    <span class="text-xs text-white mt-1">Senior</span>
+                                    <span class="text-xs text-white font-bold">450k</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div class="bg-white/90 rounded-t w-8 h-20"></div>
+                                    <span class="text-xs text-white mt-1">Lead</span>
+                                    <span class="text-xs text-white font-bold">650k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- График 4: Области применения ИИ -->
+                <div class="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-4">🎯 Области применения ИИ</h3>
+                        <div class="w-full h-40 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg p-4 relative overflow-hidden">
+                            <div class="absolute inset-4 grid grid-cols-2 gap-2 text-white text-xs">
+                                <div class="bg-white/20 rounded p-2 text-center">
+                                    <div class="font-bold">42%</div>
+                                    <div>NLP</div>
+                                </div>
+                                <div class="bg-white/30 rounded p-2 text-center">
+                                    <div class="font-bold">38%</div>
+                                    <div>Computer Vision</div>
+                                </div>
+                                <div class="bg-white/25 rounded p-2 text-center">
+                                    <div class="font-bold">28%</div>
+                                    <div>Рекомендации</div>
+                                </div>
+                                <div class="bg-white/35 rounded p-2 text-center">
+                                    <div class="font-bold">24%</div>
+                                    <div>Аналитика</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- График 5: Инструменты разработки -->
+                <div class="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-4">⚡ Инструменты разработки</h3>
+                        <div class="w-full h-40 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg p-4 relative overflow-hidden">
+                            <div class="absolute inset-4 flex flex-wrap justify-center items-center gap-2">
+                                <div class="badge badge-lg bg-white/20 text-white border-none">Jupyter 85%</div>
+                                <div class="badge badge-lg bg-white/30 text-white border-none">VS Code 72%</div>
+                                <div class="badge badge-lg bg-white/25 text-white border-none">PyCharm 45%</div>
+                                <div class="badge badge-lg bg-white/20 text-white border-none">Colab 68%</div>
+                                <div class="badge badge-lg bg-white/35 text-white border-none">Docker 52%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- График 6: Тренды и вызовы -->
+                <div class="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-all duration-300">
+                    <div class="card-body">
+                        <h3 class="card-title text-lg mb-4">📈 Основные вызовы</h3>
+                        <div class="w-full h-40 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg p-4 relative overflow-hidden">
+                            <div class="absolute inset-4 space-y-3">
+                                <div class="flex items-center justify-between text-white text-sm">
+                                    <span>Качество данных</span>
+                                    <span class="font-bold">67%</span>
+                                </div>
+                                <div class="flex items-center justify-between text-white text-sm">
+                                    <span>Нехватка экспертизы</span>
+                                    <span class="font-bold">54%</span>
+                                </div>
+                                <div class="flex items-center justify-between text-white text-sm">
+                                    <span>Вычислительные ресурсы</span>
+                                    <span class="font-bold">48%</span>
+                                </div>
+                                <div class="flex items-center justify-between text-white text-sm">
+                                    <span>Интеграция в продукт</span>
+                                    <span class="font-bold">43%</span>
+                                </div>
+                                <div class="absolute top-2 right-2">
+                                    <div class="badge badge-error badge-sm">TOP-4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-lg opacity-80 mb-6">
+                    Получите доступ к полным результатам исследования
+                </p>
+                <a href="#form" class="btn btn-primary btn-lg">
+                    📊 Участвовать в опросе
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Частые вопросы
+                </h2>
+                <p class="text-xl opacity-70">
+                    Ответы на самые популярные вопросы об участии в опросе
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="collapse collapse-plus bg-black/20 backdrop-blur border border-white/10 rounded-2xl shadow-xl">
+                    <input type="radio" name="faq-accordion" /> 
+                    <div class="collapse-title text-xl font-medium text-white flex items-center">
+                        <span class="mr-3 text-2xl">👥</span>
+                        Кто может участвовать в опросе?
+                    </div>
+                    <div class="collapse-content text-white/80"> 
+                        <p class="pt-2 text-lg leading-relaxed">
+                            Любой специалист, интересующийся технологиями искусственного интеллекта
+                            — от студентов до руководителей R&D‑подразделений.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-black/20 backdrop-blur border border-white/10 rounded-2xl shadow-xl">
+                    <input type="radio" name="faq-accordion" /> 
+                    <div class="collapse-title text-xl font-medium text-white flex items-center">
+                        <span class="mr-3 text-2xl">⏱️</span>
+                        Сколько времени займёт опрос?
+                    </div>
+                    <div class="collapse-content text-white/80"> 
+                        <p class="pt-2 text-lg leading-relaxed">
+                            В среднем заполнение анкеты занимает около 10 минут.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-black/20 backdrop-blur border border-white/10 rounded-2xl shadow-xl">
+                    <input type="radio" name="faq-accordion" /> 
+                    <div class="collapse-title text-xl font-medium text-white flex items-center">
+                        <span class="mr-3 text-2xl">🔒</span>
+                        Анонимный ли опрос?
+                    </div>
+                    <div class="collapse-content text-white/80"> 
+                        <p class="pt-2 text-lg leading-relaxed">
+                            Все ответы обезличиваются. Мы публикуем только агрегированные данные.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-black/20 backdrop-blur border border-white/10 rounded-2xl shadow-xl">
+                    <input type="radio" name="faq-accordion" /> 
+                    <div class="collapse-title text-xl font-medium text-white flex items-center">
+                        <span class="mr-3 text-2xl">📅</span>
+                        Когда будут результаты?
+                    </div>
+                    <div class="collapse-content text-white/80"> 
+                        <p class="pt-2 text-lg leading-relaxed">
+                            Публикация итогов запланирована на IV квартал 2025 года. 
+                            Участники получат отчёт первыми.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-black/20 backdrop-blur border border-white/10 rounded-2xl shadow-xl">
+                    <input type="radio" name="faq-accordion" /> 
+                    <div class="collapse-title text-xl font-medium text-white flex items-center">
+                        <span class="mr-3 text-2xl">🎁</span>
+                        Какие призы можно выиграть?
+                    </div>
+                    <div class="collapse-content text-white/80"> 
+                        <p class="pt-2 text-lg leading-relaxed">
+                            Участники автоматически участвуют в розыгрыше подарков от спонсоров: 
+                            курсы, книги, мерч и другие полезные призы.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-black/20 backdrop-blur border border-white/10 rounded-2xl shadow-xl">
+                    <input type="radio" name="faq-accordion" /> 
+                    <div class="collapse-title text-xl font-medium text-white flex items-center">
+                        <span class="mr-3 text-2xl">📊</span>
+                        Как будут использованы результаты?
+                    </div>
+                    <div class="collapse-content text-white/80"> 
+                        <p class="pt-2 text-lg leading-relaxed">
+                            Результаты помогут сообществу понять тренды, выявить лучшие практики 
+                            и направить развитие ИИ-инструментов в России и СНГ.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <div class="bg-white/10 backdrop-blur-xl p-8 rounded-3xl border border-white/20 shadow-2xl">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        Готовы принять участие?
+                    </h3>
+                    <p class="text-white/70 mb-6 text-lg">
+                        Если вопросов больше нет — переходите к участию в опросе
+                    </p>
+                    <a href="#form" class="btn btn-primary btn-lg px-10 py-4 text-lg font-semibold shadow-xl hover:scale-105 transition-all duration-300">
+                        🚀 Принять участие в опросе
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="form" class="py-24 px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
+        <div class="container mx-auto max-w-2xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Остались вопросы?
+                </h2>
+                <p class="text-xl opacity-90 mb-8">
+                    Оставьте свои контакты и мы с вами свяжемся
+                </p>
+            </div>
+            
+            <div class="card bg-black/40 backdrop-blur-xl border border-white/10 shadow-2xl">
+                <div class="card-body p-8">
+                    <h3 class="text-2xl font-bold text-white mb-8 text-center">
+                        💬 Связаться с нами
+                    </h3>
+                    
+                    <form id="contactFormMain" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text text-lg font-medium text-white">👤 Ваше имя</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    name="name"
+                                    placeholder="Как к вам обращаться?"
+                                    class="input input-bordered input-lg w-full bg-white/5 border-white/20 focus:border-primary text-white placeholder-white/50"
+                                    required
+                                >
+                            </div>
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text text-lg font-medium text-white">📧 Email</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    name="contact_email"
+                                    placeholder="your@email.com"
+                                    class="input input-bordered input-lg w-full bg-white/5 border-white/20 focus:border-primary text-white placeholder-white/50"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text text-lg font-medium text-white">📱 Телефон</span>
+                                    <span class="label-text-alt opacity-60 text-white">необязательно</span>
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    name="phone"
+                                    placeholder="+7 (900) 000-00-00"
+                                    class="input input-bordered input-lg w-full bg-white/5 border-white/20 focus:border-primary text-white placeholder-white/50"
+                                >
+                            </div>
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text text-lg font-medium text-white">🏢 Компания</span>
+                                    <span class="label-text-alt opacity-60 text-white">необязательно</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    name="company"
+                                    placeholder="Название компании"
+                                    class="input input-bordered input-lg w-full bg-white/5 border-white/20 focus:border-primary text-white placeholder-white/50"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label class="label">
+                                <span class="label-text text-lg font-medium text-white">💭 Ваш вопрос или сообщение</span>
+                                <span class="label-text-alt opacity-60 text-white">необязательно</span>
+                            </label>
+                            <textarea 
+                                name="question"
+                                placeholder="Расскажите, чем можем помочь, или просто оставьте контакты для связи..."
+                                class="textarea textarea-bordered w-full bg-white/5 border-white/20 focus:border-primary text-white placeholder-white/50 resize-none"
+                                rows="4"
+                            ></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg w-full text-lg font-semibold shadow-xl hover:scale-105 transition-all duration-300">
+                            📞 Отправить запрос
+                        </button>
+                    </form>
+                    
+                    <div id="contactMessageMain" class="mt-6"></div>
+                    
+                    <div class="mt-8 p-4 bg-white/5 rounded-lg border border-white/10">
+                        <div class="flex items-center gap-3 text-white/80 text-sm">
+                            <span class="text-lg">🔒</span>
+                            <span>Ваши данные защищены и не передаются третьим лицам</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-black text-neutral-content">
+        <aside>
+            <p class="font-bold text-lg">State&nbsp;of&nbsp;AI © 2025</p>
+            <p>Сделано энтузиастами ИИ</p>
+        </aside>
+        <nav>
+            <header class="footer-title">Ссылки</header>
+            <a class="link link-hover" href="/docs">API документация</a>
+            <a class="link link-hover" href="/health">Статус системы</a>
+        </nav>
+    </footer>
+
+    <script>
+
+        // Обработка основной формы обратной связи
+        document.getElementById('contactFormMain').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = {
+                email: formData.get('contact_email'),
+                username: formData.get('contact_email').split('@')[0] + '_contact',
+            };
+            
+            const messageDiv = document.getElementById('contactMessageMain');
+            
+            try {
+                const response = await fetch('/api/v1/users/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    messageDiv.innerHTML = `
+                        <div class="alert alert-success bg-green-500/20 border border-green-500/30 text-white rounded-lg p-4">
+                            <span>✅ Спасибо! Мы получили ваш запрос и свяжемся с вами в ближайшее время.</span>
+                        </div>
+                    `;
+                    e.target.reset();
+                } else {
+                    const error = await response.json();
+                    messageDiv.innerHTML = `
+                        <div class="alert alert-error bg-red-500/20 border border-red-500/30 text-white rounded-lg p-4">
+                            <span>❌ Ошибка: ${error.detail || 'Попробуйте позже'}</span>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-error bg-red-500/20 border border-red-500/30 text-white rounded-lg p-4">
+                        <span>❌ Ошибка сети. Попробуйте позже.</span>
+                    </div>
+                `;
+            }
+        });
+
+        // Обработка формы обратной связи (FAQ секция)
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = {
+                email: formData.get('contact_email'),
+                username: formData.get('contact_email').split('@')[0] + '_contact',
+            };
+            
+            const messageDiv = document.getElementById('contactMessage');
+            
+            try {
+                const response = await fetch('/api/v1/users/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                if (response.ok) {
+                    messageDiv.innerHTML = `
+                        <div class="alert alert-success bg-green-500/20 border border-green-500/30 text-white">
+                            <span>✅ Спасибо! Мы получили ваш запрос и свяжемся с вами в ближайшее время.</span>
+                        </div>
+                    `;
+                    e.target.reset();
+                } else {
+                    const error = await response.json();
+                    messageDiv.innerHTML = `
+                        <div class="alert alert-error bg-red-500/20 border border-red-500/30 text-white">
+                            <span>❌ Ошибка: ${error.detail || 'Попробуйте позже'}</span>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                messageDiv.innerHTML = `
+                    <div class="alert alert-error bg-red-500/20 border border-red-500/30 text-white">
+                        <span>❌ Ошибка сети. Попробуйте позже.</span>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
